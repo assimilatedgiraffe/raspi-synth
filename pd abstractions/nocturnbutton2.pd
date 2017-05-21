@@ -1,0 +1,48 @@
+#N canvas 316 188 450 483 10;
+#X obj 199 116 moses 82;
+#X obj 198 140 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 237 146 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 202 69 r buttonsin;
+#X obj 100 203 tgl 20 0 empty empty empty 17 7 0 10 -228856 -4034 -1
+0 1;
+#X obj 16 307 s buttonsout;
+#X obj 200 94 route \$1;
+#X obj 115 283 pack 0 \$1;
+#X msg 117 307 \$2 \$1;
+#X obj 119 332 s buttonvalues;
+#X obj 17 269 pack 0 \$1;
+#X obj 130 205 save.me.mmb button\$1 assg-presets;
+#X obj 222 361 spigot~;
+#X obj 388 220 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 388 240 f \$1;
+#X obj 386 197 loadbang;
+#X obj 193 417 throw~;
+#X obj 388 261 + 1;
+#X obj 251 323 catch~ button-\$1-in;
+#X msg 193 396 set button-\$1-in;
+#X obj 300 406 throw~ button-\$1-out;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 10 0;
+#X connect 4 0 7 0;
+#X connect 4 0 11 0;
+#X connect 4 0 12 1;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 5 0;
+#X connect 11 0 4 0;
+#X connect 12 0 16 0;
+#X connect 12 1 20 0;
+#X connect 13 0 14 0;
+#X connect 14 0 17 0;
+#X connect 15 0 13 0;
+#X connect 17 0 19 0;
+#X connect 18 0 12 0;
+#X connect 19 0 16 0;
+#X coords 0 -1 1 1 20 25 2 100 200;
